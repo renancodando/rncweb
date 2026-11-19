@@ -2,11 +2,13 @@
 (() => {
   'use strict';
 
-  const PHONE_NUMBER = '5514991948943'; // Contato publicado no site da Mi Tech Atacado; validar antes do uso definitivo.
+  const PHONE_NUMBER = '5582987372264'; // Telefone público da Gtechservice em Maceió.
   const views = {
     home: document.getElementById('chooser'),
     '1': document.getElementById('demo-one'),
-    '2': document.getElementById('demo-two')
+    '2': document.getElementById('demo-two'),
+    '3': document.getElementById('demo-three'),
+    '4': document.getElementById('demo-four')
   };
   const toolbar = document.getElementById('demo-toolbar');
   const quoteDialog = document.getElementById('quote-dialog');
@@ -20,7 +22,7 @@
 
   function viewFromUrl() {
     const v = new URL(window.location.href).searchParams.get('demo');
-    return v === '1' || v === '2' ? v : 'home';
+    return ['1','2','3','4'].includes(v) ? v : 'home';
   }
 
   function buildUrl(view) {
@@ -36,10 +38,12 @@
     currentView = view;
     for (const [key, element] of Object.entries(views)) element.hidden = key !== view;
     toolbar.hidden = view === 'home';
+    const selectedFrame = views[view]?.querySelector('iframe[data-src]');
+    if (selectedFrame && !selectedFrame.getAttribute('src')) selectedFrame.src = selectedFrame.dataset.src;
     document.body.dataset.view = view;
     document.title = view === 'home'
-      ? 'Mi Tech Jaú | Demonstrações RNCWeb'
-      : 'Mi Tech Jaú | Demonstrativo ' + view + ' — RNCWeb';
+      ? 'Gtechservice | Demonstrações RNCWeb'
+      : 'Gtechservice | Demonstrativo ' + view + ' — RNCWeb';
 
     document.querySelectorAll('.toolbar-tab').forEach(button => {
       const selected = button.dataset.go === view;
@@ -133,7 +137,7 @@
     const details = detailsField.value.trim();
 
     const message = [
-      'Olá! Encontrei a Mi Tech Jaú pelo site e gostaria de mais informações.',
+      'Olá, Gtechservice! Encontrei a loja pelo site e gostaria de mais informações.',
       '',
       'Assunto: ' + service,
       device ? 'Aparelho: ' + device : '',
