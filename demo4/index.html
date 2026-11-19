@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gtechservice — assistência técnica de celulares</title>
+    <meta
+      name="description"
+      content="Demonstração de site para a Gtechservice em Maceió/AL, com assistência em celulares e computadores."
+    />
+    <meta name="theme-color" content="#0b0e11" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233e5568'/%3E%3Crect x='10' y='5' width='12' height='22' rx='3' fill='none' stroke='%23e9eef0' stroke-width='2'/%3E%3Cpath d='M13 9l4 6-3 3 5 6' stroke='%23e0962a' stroke-width='2' fill='none'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <canvas id="bench" aria-hidden="true"></canvas>
+    <div class="shade" aria-hidden="true"></div>
+
+    <header class="top">
+      <a class="brand" href="#chegou">Gtechservice</a>
+      <p class="open">Maceió · Segunda a sábado</p>
+      <a class="btn btn-small" href="#orcamento">Pedir orçamento</a>
+    </header>
+
+    <nav class="os" aria-label="Etapas do conserto">
+      <p>Etapas de um reparo</p>
+      <ol>
+        <li><a href="#chegou">Chegou</a></li>
+        <li><a href="#tela">Tela</a></li>
+        <li><a href="#bateria">Bateria</a></li>
+        <li><a href="#placa">Placa</a></li>
+        <li><a href="#precos">Peças e preços</a></li>
+        <li><a href="#orcamento">Pronto</a></li>
+      </ol>
+    </nav>
+
+    <main>
+      <section class="ch hero" id="chegou" data-chapter="0">
+        <div class="copy">
+          <h1>Seu aparelho merece atenção de verdade.</h1>
+          <p class="lead">
+            A Gtechservice atende celulares, notebooks e computadores no Centro de Maceió. Role a página para visualizar, etapa por etapa, um exemplo de reparo,
+            numa bancada interativa em 3D.
+          </p>
+          <p class="actions">
+            <a class="btn" href="#orcamento">Pedir orçamento</a>
+            <a class="link" href="#precos">Consultar serviços</a>
+          </p>
+          <p class="hint">Mexa o cursor: a luminária da bancada acompanha.</p>
+        </div>
+      </section>
+
+      <section class="ch" id="tela" data-chapter="1">
+        <div class="copy">
+          <h2>Troca de tela: conheça cada etapa.</h2>
+          <p>
+            A Gtechservice trabalha com manutenção de celulares, inclusive trocas de tela e display. Consulte a compatibilidade das peças, o orçamento e o prazo para o seu modelo.
+          </p>
+          <p class="tape">Orçamento sob consulta</p>
+          <dl class="facts">
+            <div><dt>Tempo de bancada</dt><dd>Conforme avaliação</dd></div>
+            <div><dt>Garantia</dt><dd>Consulte condições</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="ch" id="bateria" data-chapter="2">
+        <div class="copy">
+          <h2>Bateria que não chega ao fim do dia.</h2>
+          <p>
+            Bateria descarregando rapidamente ou apresentando falhas? Consulte a equipe da Gtechservice para avaliação e opções de troca. Evite mexer no aparelho por conta própria.
+          </p>
+          <p class="tape">Orçamento sob consulta</p>
+          <dl class="facts">
+            <div><dt>Tempo de bancada</dt><dd>Conforme avaliação</dd></div>
+            <div><dt>Garantia</dt><dd>Consulte condições</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="ch" id="placa" data-chapter="3">
+        <div class="copy">
+          <h2>Quando o defeito está na placa.</h2>
+          <p>
+            Problemas de carregamento, sinais de oxidação ou defeitos em componentes? A Gtechservice divulga manutenção de placas e conectores. Consulte a disponibilidade e os detalhes técnicos.
+          </p>
+          <p class="tape">Diagnóstico sob consulta</p>
+          <dl class="facts">
+            <div><dt>Prazo</dt><dd>Conforme avaliação</dd></div>
+            <div><dt>Seus dados</dt><dd>Faça backup</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="ch" id="precos" data-chapter="4">
+        <div class="copy wide">
+          <h2>Serviços da Gtechservice e como consultar.</h2>
+          <table>
+            <thead>
+              <tr><th scope="col">Serviço</th><th scope="col">Orçamento</th><th scope="col">Prazo</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Troca de tela</th><td>Sob consulta</td><td>A confirmar</td></tr>
+              <tr><th scope="row">Troca de bateria</th><td>Sob consulta</td><td>A confirmar</td></tr>
+              <tr><th scope="row">Conector de carga</th><td>Sob consulta</td><td>A confirmar</td></tr>
+              <tr><th scope="row">Câmera traseira</th><td>Sob consulta</td><td>A confirmar</td></tr>
+              <tr><th scope="row">Vidro traseiro</th><td>Sob consulta</td><td>A confirmar</td></tr>
+              <tr><th scope="row">Alto-falante ou microfone</th><td>Sob consulta</td><td>A confirmar</td></tr>
+              <tr><th scope="row">Limpeza após contato com água</th><td>Sob consulta</td><td>A confirmar</td></tr>
+              <tr><th scope="row">Reparo de placa</th><td>Sob consulta</td><td>A confirmar</td></tr><tr><th scope="row">Computadores e notebooks</th><td>Sob consulta</td><td>A confirmar</td></tr><tr><th scope="row">Celulares e acessórios</th><td>Sob consulta</td><td>Estoque a confirmar</td></tr>
+            </tbody>
+          </table>
+          <p class="note">Disponibilidade, preços, prazos e garantia sujeitos à confirmação com a loja.</p>
+        </div>
+      </section>
+
+      <section class="ch" id="orcamento" data-chapter="5">
+        <div class="copy">
+          <h2>Seu aparelho, sua próxima etapa.</h2>
+          <p>
+            Descreva o problema, informe o modelo do aparelho e converse com a Gtechservice para conhecer as opções de avaliação e reparo.
+          </p>
+          <form id="orcamento-form" novalidate>
+            <label>
+              Modelo do aparelho
+              <input name="modelo" type="text" autocomplete="off" placeholder="Ex.: Galaxy S23, iPhone 13" />
+            </label>
+            <fieldset>
+              <legend>O que aconteceu</legend>
+              <label class="chip"><input type="radio" name="defeito" value="tela trincada" checked /><span>Tela trincada</span></label>
+              <label class="chip"><input type="radio" name="defeito" value="bateria dura pouco" /><span>Bateria dura pouco</span></label>
+              <label class="chip"><input type="radio" name="defeito" value="não carrega" /><span>Não carrega</span></label>
+              <label class="chip"><input type="radio" name="defeito" value="caiu na água" /><span>Caiu na água</span></label>
+              <label class="chip"><input type="radio" name="defeito" value="outro defeito" /><span>Outro</span></label>
+            </fieldset>
+            <label>
+              Seu nome
+              <input name="nome" type="text" autocomplete="given-name" />
+            </label>
+            <p class="form-error" role="alert"></p>
+            <button class="btn" type="submit">Enviar pelo WhatsApp</button>
+          </form>
+          <address>
+            Rua Agerson Dantas, 66 — Centro, Maceió/AL, 57020-310<br />
+            Segunda a sexta, 08h–18h · Sábado, 08h–14h<br />
+            <a href="tel:+5582987372264">(82) 98737-2264</a>
+          </address>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  <aside class="demo-legal-note">Site demonstrativo RNCWeb para a Gtechservice — valores e prazos sob consulta. Cena 3D ilustrativa.</aside></body>
+</html>
