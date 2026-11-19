@@ -91,3 +91,7 @@
 
 /* Aviso discreto da demonstração, fora da composição original. */
 .cscell-demo-disclaimer{font-size:10px;text-align:center;padding:12px;color:#aba9ad;line-height:1.5}
+
+/* Mantém a composição original do CSCell, ajustando apenas o comprimento da marca. */
+.brand-type{font-size:clamp(20px,2.2vw,29px)}
+@media(max-width:640px){.brand-type{font-size:23px}}
