@@ -19,7 +19,7 @@ Duas propostas de **site institucional** para apresentação à Mi Tech Jaú, to
 | `demo2-cscell.css` | Estilos, animações, celular e órbitas em CSS |
 | `demo2-cscell.js` | Menus, modais, serviços, formulário e mapa do Demonstrativo 2 |
 
-O modelo 2 foi recriado **usando a estrutura e as interações do código CSCell que já está no repositório `renancodando/sonotechcell`**, mas sem dependência de imagens externas ou do outro repositório. O smartphone do hero é construído apenas com CSS. Os dois projetos funcionam na mesma página, com o botão de alternar sempre disponível.
+O **Demonstrativo 2 mantém o HTML, CSS, animações, estrutura, ícones, modais e apresentação original do projeto CSCell** do repositório `renancodando/sonotechcell`; os textos e dados empresariais foram alterados para a Mi Tech Celular de Jaú. A paleta original vermelha, o desenho do telefone e os efeitos originais foram mantidos. A névoa SVG foi copiada para este repositório e a imagem original do smartphone é carregada do repositório CSCell, até que ela possa ser armazenada também no RNCWeb. Os dois projetos funcionam na mesma página, com o botão de alternar sempre disponível.
 
 ## Funcionamento
 
@@ -32,7 +32,7 @@ O modelo 2 foi recriado **usando a estrutura e as interações do código CSCell
 
 ## Dados que devem ser confirmados com a loja
 
-O telefone da demonstração **(14) 99194-8943** foi identificado na página da [Mi Tech Atacado](https://mitechatacado.loja.click/pagina/quem-somos). A Mi Tech Atacado atua em peças para manutenção de celulares, mas não foi possível confirmar que seu WhatsApp atende a **Mi Tech Celular de Jaú**. Validar com a empresa **antes de mandar a página como site oficial**. Até a confirmação, o texto informa a origem do contato nas partes pertinentes.
+A unidade exibida no Demonstrativo 2 é a **Mi Tech Celular — Loja 1**. Endereço: Rua Lourenço Prado, 364, Centro, Jaú/SP. Telefone público: **(14) 99890-1897**. Horários divulgados: segunda a sexta, 08h–18h; sábado, 08h–17h. Confira com a empresa antes da publicação definitiva.
 
 Também será necessário confirmar endereço preciso, horários, lista de serviços, política de garantia, identidade visual/logotipo oficial e redes sociais.
 
