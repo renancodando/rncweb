@@ -3,27 +3,33 @@
 // Static site: contact and location work without a backend or database.
 const business = {
   name: 'Mi Tech Jaú',
-  whatsapp: '5514991948943',
-  phone: '(14) 99194-8943',
-  address: 'Mi Tech Jaú — Jaú, São Paulo, Brasil (endereço completo a confirmar)',
-  mapAddress: 'Mi Tech Celular, Jaú, São Paulo, Brasil',
+  whatsapp: '5514998901897',
+  phone: '(14) 99890-1897',
+  address: 'Rua Lourenço Prado, 364, Centro, Jaú - SP, 17201-000, Brasil',
+  mapAddress: 'Rua Lourenço Prado, 364, Centro, Jaú - SP, 17201-000, Brasil',
   timeZone: 'America/Sao_Paulo'
 };
-// Contato público da Mi Tech Atacado; confirmar vínculo com a Mi Tech Celular antes de uso comercial.
 const mapsQuery = encodeURIComponent(business.mapAddress);
 document.querySelectorAll('[data-map-route]').forEach(link => {
   link.href = `https://www.google.com/maps/dir/?api=1&destination=${mapsQuery}`;
 });
 document.querySelector('.contact-number').href = `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(`Olá, ${business.name}! Gostaria de informações sobre os serviços.`)}`;
 
-function updateBusinessHours() {
+function updateBusinessHours(now = new Date()) {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {
+    timeZone: business.timeZone, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+  }).formatToParts(now).map(part => [part.type, part.value]));
+  const minutes = Number(parts.hour) * 60 + Number(parts.minute);
+  const closing = parts.weekday === 'Sat' ? 17 * 60 : 18 * 60;
+  const open = parts.weekday !== 'Sun' && minutes >= 8 * 60 && minutes < closing;
   document.querySelectorAll('[data-business-status]').forEach(status => {
-    status.classList.remove('is-open');
-    status.textContent = 'Horários da loja sujeitos a confirmação';
+    status.classList.toggle('is-open', open);
+    status.textContent = open ? `Dentro do horário de atendimento · até ${closing / 60}h` : 'Fora do horário de atendimento';
   });
 }
 updateBusinessHours();
-
+setInterval(updateBusinessHours, 60_000);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) updateBusinessHours(); });
 
 async function copyText(text, scope) {
   const feedback = scope.querySelector('[data-copy-feedback]');
