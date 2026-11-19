@@ -2,12 +2,12 @@
 
 // Static site: contact and location work without a backend or database.
 const business = {
-  name: 'Mi Tech Jaú',
-  whatsapp: '5514998901897',
-  phone: '(14) 99890-1897',
-  address: 'Rua Lourenço Prado, 364, Centro, Jaú - SP, 17201-000, Brasil',
-  mapAddress: 'Rua Lourenço Prado, 364, Centro, Jaú - SP, 17201-000, Brasil',
-  timeZone: 'America/Sao_Paulo'
+  name: 'Gtechservice',
+  whatsapp: '5582987372264',
+  phone: '(14) 98737-2264',
+  address: 'Rua Agerson Dantas, 66, Centro, Maceió - AL, 57020-310, Brasil',
+  mapAddress: 'Rua Agerson Dantas, 66, Centro, Maceió - AL, 57020-310, Brasil',
+  timeZone: 'America/Maceio'
 };
 const mapsQuery = encodeURIComponent(business.mapAddress);
 document.querySelectorAll('[data-map-route]').forEach(link => {
@@ -20,7 +20,7 @@ function updateBusinessHours(now = new Date()) {
     timeZone: business.timeZone, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
   }).formatToParts(now).map(part => [part.type, part.value]));
   const minutes = Number(parts.hour) * 60 + Number(parts.minute);
-  const closing = parts.weekday === 'Sat' ? 17 * 60 : 18 * 60;
+  const closing = parts.weekday === 'Sat' ? 14 * 60 : 18 * 60;
   const open = parts.weekday !== 'Sun' && minutes >= 8 * 60 && minutes < closing;
   document.querySelectorAll('[data-business-status]').forEach(status => {
     status.classList.toggle('is-open', open);
@@ -170,7 +170,7 @@ document.querySelectorAll('[data-open]').forEach(button => button.addEventListen
   const action = button.dataset.open;
   if (action === 'location') {
     selectedService = '';
-    showDetail({ title: 'Encontre a Mi Tech Jaú', description: 'Atendimento e assistência técnica de celulares em Jaú, SP. Consulte os horários antes de sair.', icon: 'pin' }, button, true);
+    showDetail({ title: 'Encontre a Gtechservice', description: 'Atendimento e assistência técnica de celulares em Maceió, AL. Consulte os horários antes de sair.', icon: 'pin' }, button, true);
     return;
   }
   if (action === 'diagnosis') {
