@@ -19,3 +19,9 @@
 @media(max-width:380px){.chooser-intro h1{font-size:35px}.toolbar-tab{padding:8px}.light-service-card{padding:13px 10px}.dark-button-primary,.dark-button-ghost{padding:10px 11px}.phone-scene{transform:scale(.7)}.dark-hero{min-height:700px}.dark-hero-inner{min-height:700px}.dark-shortcuts strong{font-size:11px}.dark-shortcuts small{font-size:9px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
 @keyframes glowPulse{0%,100%{opacity:.78}50%{opacity:1}}
+
+/* O Demonstrativo 2 usa a reprodução independente do projeto CSCell em iframe,
+   preservando a navegação e o formulário e mantendo o alternador sempre visível. */
+.demo-two-embedded{height:calc(100dvh - 51px);min-height:440px!important;overflow:hidden!important;background:#101012!important}
+.demo-two-embedded iframe{display:block;width:100%;height:100%;border:0;background:#101012}
+@media(max-width:680px){.demo-two-embedded{height:calc(100dvh - 48px)}}
