@@ -1,32 +1,47 @@
-# RNCWeb · Apresentação Mi Tech Jaú
+# RNCWeb · Demonstrações Mi Tech Jaú
 
-Dois modelos **institucionais** de site, sem fotografias, login, banco de dados, loja virtual nem dependências externas.
+Duas propostas de **site institucional** para apresentação à Mi Tech Jaú, totalmente em HTML, CSS e JavaScript, sem login, banco de dados, serviços pagos ou dependências de outros repositórios.
 
-- **Página inicial:** escolha entre os dois modelos.
-- **Demonstrativo 1:** visual tradicional, claro e azul; serviços, contato, apresentação da loja, mapa e avaliações.
-- **Demonstrativo 2:** visual escuro e laranja inspirado no mockup enviado, com ilustração de celular inteiramente em CSS, atalhos de serviços e painéis institucionais.
-- **Alternador superior:** troca as demonstrações sem sair do site.
-- **Copiar link:** compartilha o modelo específico, por meio de `?demo=1` ou `?demo=2`.
-- **Contato:** formulário de assunto que abre uma mensagem pré-formatada no WhatsApp, por decisão do visitante.
+**Site publicado:** https://rncweb-mitech-demonstracoes.vercel.app/
 
-## Testar localmente
+**Abrir uma versão diretamente:**
+- Tradicional: https://rncweb-mitech-demonstracoes.vercel.app/?demo=1
+- CSCell adaptado: https://rncweb-mitech-demonstracoes.vercel.app/?demo=2
 
-Abra `index.html` no navegador. A estrutura é inteiramente estática: `index.html`, `styles.css` e `app.js`.
+## Organização
 
-Para hospedar no **Cloudflare Pages**, conecte este repositório, selecione a branch `main`, escolha *Framework preset: None*, deixe o *Build command* vazio e configure o *Build output directory* como `/` (diretório raiz).
+| Arquivo | Função |
+| --- | --- |
+| `index.html` | Escolha das demonstrações e estrutura da proposta tradicional |
+| `styles.css` | Estilos da página inicial e do Demonstrativo 1 |
+| `app.js` | Alternador, links próprios e mensagens do WhatsApp da versão 1 |
+| `demo2.html` | Demonstrativo 2, derivado do layout CSCell |
+| `demo2-cscell.css` | Estilos, animações, celular e órbitas em CSS |
+| `demo2-cscell.js` | Menus, modais, serviços, formulário e mapa do Demonstrativo 2 |
 
-Em alguns painéis do Cloudflare, o campo de saída aceita `.` em vez de `/`; ambos indicam os arquivos na raiz da publicação, conforme a configuração da plataforma.
+O modelo 2 foi recriado **usando a estrutura e as interações do código CSCell que já está no repositório `renancodando/sonotechcell`**, mas sem dependência de imagens externas ou do outro repositório. O smartphone do hero é construído apenas com CSS. Os dois projetos funcionam na mesma página, com o botão de alternar sempre disponível.
 
-## Contatos, reputação e informações comerciais
+## Funcionamento
 
-**Atenção:** estas são propostas demonstrativas, não o site oficial da empresa. A razão social exata, os horários, o endereço, as avaliações, o número do WhatsApp e os serviços efetivamente prestados devem ser validados com a Mi Tech Jaú antes de a demonstração ser apresentada como site oficial.
+- Menu responsivo em ambos os modelos.
+- Botões de atendimento, assistência e serviços; modais e formulário.
+- A navegação para WhatsApp é voluntária e abre uma conversa preenchida, sem envio automático.
+- Botão copiar link da versão e URLs com `?demo=1` e `?demo=2`.
+- Mapa por busca do nome da loja em Jaú; endereço exato ainda não confirmado.
+- Nenhuma opinião de cliente, quantidade de avaliações, garantia ou horário foi inventado.
 
-O telefone `(14) 99194-8943` é exibido publicamente no site da [Mi Tech Atacado](https://mitechatacado.loja.click/pagina/quem-somos). Como o escopo exato da Mi Tech Atacado e da loja chamada Mi Tech Jaú pode diferir, **confirmar o canal apropriado de assistência e varejo** com a empresa. Para alterar o destino de todas as mensagens, edite a constante `PHONE_NUMBER` no começo de `app.js` e os textos de contato do `index.html`.
+## Dados que devem ser confirmados com a loja
 
-Nenhuma nota, quantidade de avaliações, depoimento ou horário foi inventado. O link do Google Maps usa a **pesquisa pelo nome da empresa em Jaú**, sem fixar um endereço não confirmado. Este projeto não vende aparelhos nem afirma disponibilidade de estoque.
+O telefone da demonstração **(14) 99194-8943** foi identificado na página da [Mi Tech Atacado](https://mitechatacado.loja.click/pagina/quem-somos). A Mi Tech Atacado atua em peças para manutenção de celulares, mas não foi possível confirmar que seu WhatsApp atende a **Mi Tech Celular de Jaú**. Validar com a empresa **antes de mandar a página como site oficial**. Até a confirmação, o texto informa a origem do contato nas partes pertinentes.
 
-## Próxima etapa
+Também será necessário confirmar endereço preciso, horários, lista de serviços, política de garantia, identidade visual/logotipo oficial e redes sociais.
 
-Depois da aprovação, substituir os conteúdos de exemplo pelos dados oficiais e publicar em um domínio personalizado. A tecnologia foi mantida simples (HTML, CSS e JavaScript), sem necessidade de backend ou cobrança de serviços de terceiros para o funcionamento básico.
+Para atualizar o WhatsApp, substituir `PHONE_NUMBER` em `app.js` e `business.whatsapp`/`business.phone` em `demo2-cscell.js`, além dos números visíveis em `index.html` e `demo2.html`.
 
-Desenvolvido pela **RNCWeb**.
+## Deploy
+
+A publicação atual foi realizada pela API da **Vercel** com todos os arquivos do projeto. A URL acima é pública, mas **a sincronização automática GitHub → Vercel ainda não está ativa**: a conta Vercel não possui a conexão de login GitHub exigida para vincular o repositório. Novos commits não entram automaticamente no ar até configurar essa conexão.
+
+Para hospedagem no **Cloudflare Pages**, faça a integração do repositório GitHub com framework `None`, sem comando de build, publicando os arquivos da raiz do projeto.
+
+Projeto conceitual da **RNCWeb** para apresentação.
