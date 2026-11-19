@@ -25,3 +25,54 @@
 .demo-two-embedded{height:calc(100dvh - 51px);min-height:440px!important;overflow:hidden!important;background:#101012!important}
 .demo-two-embedded iframe{display:block;width:100%;height:100%;border:0;background:#101012}
 @media(max-width:680px){.demo-two-embedded{height:calc(100dvh - 48px)}}
+
+
+/* RNCWeb · 4 modelos lado a lado. Pré-visualizações feitas com CSS, sem fotografias. */
+.choose-skeleton .choose-window{background:#f6f8f8}
+.skeleton-preview{background:#fdfefd;color:#0f1317;padding:20px;position:relative}
+.skeleton-preview-top{position:relative;z-index:2;font-weight:900;font-size:13px;color:#111;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.skeleton-preview-top span{font-size:8px;font-weight:650;color:#667}
+.skeleton-preview-grid{position:absolute;inset:0;background-image:linear-gradient(#1a3dff17 1px,transparent 1px),linear-gradient(90deg,#1a3dff17 1px,transparent 1px);background-size:20px 20px;mask-image:linear-gradient(120deg,transparent 0%,#000 85%)}
+.skeleton-preview-headline{position:relative;z-index:1;display:block;font-size:clamp(25px,3.5vw,43px);line-height:.94;font-weight:900;letter-spacing:-2px;margin-top:27px}
+.skeleton-preview-headline b{color:#1a3dff}.skeleton-preview-controls{position:absolute;display:flex;gap:7px;bottom:20px;left:20px}
+.skeleton-preview-controls i{width:39px;height:11px;background:#00c566;border:1px solid #0d8a4a;border-radius:2px}.skeleton-preview-controls i:nth-child(2){background:#ff3b2f}.skeleton-preview-controls i:nth-child(3){background:#1a3dff}
+.choose-action.skeleton-action{background:#f6f7fb;border:1px solid #cbd4dc;color:#14223c}
+.choose-action.skeleton-action:hover{background:#fff}
+.choose-card.choose-tech{background:#131c24}
+.tech-preview{position:relative;background:radial-gradient(ellipse at 74% 55%,#33546b,#131f29 60%,#091015);color:#eaf0f4;padding:18px 22px}
+.tech-preview-label{font-size:8px;letter-spacing:2px;font-weight:800;color:#9badbb}
+.tech-preview-head{position:absolute;top:66px;left:23px;display:block;font-size:31px;line-height:1;font-weight:900;letter-spacing:-1.2px;z-index:2}
+.tech-preview-blob{position:absolute;width:120px;height:182px;right:67px;top:25px;background:linear-gradient(100deg,#091116,#b28d68 5%,#1c2126 12%,#0b0e11 88%,#ceac72 97%,#252626);transform:rotate(20deg);border-radius:22px;box-shadow:12px 10px 0 #0a0e12,0 20px 34px #0009}
+.tech-preview-blob:before{content:"";position:absolute;inset:7px;border-radius:17px;background:radial-gradient(circle at 20% 25%,#1f3e4e,#0b1118 60%,#1d242b);border:1px solid #cfa97735}
+.tech-preview-blob i{position:absolute;inset:50px -65px 40px -65px;border:2px solid #e7a33880;border-radius:50%;transform:rotate(-25deg);pointer-events:none}
+.tech-preview-footer{position:absolute;bottom:18px;left:23px;font-size:9px;letter-spacing:1.8px;color:#e4a85f}
+.choose-action.tech-action{background:#c99342;color:#15191e}
+.choose-action.tech-action:hover{background:#ecb65d}
+.choose-dark .mini-phone{box-shadow:0 0 35px #c8243a55;background:linear-gradient(120deg,#ce3846,#090b0e 22%,#13181b 80%,#d83641)}
+.choose-dark .mini-orbit{border-color:#db243eaa}
+.choose-dark .dark-preview-body .mini-button{background:#ee3649}
+.choose-dark .mark-orange,.choose-dark .tiny-dot.orange{background:#e83549}
+.choose-dark .dark-preview-body{background:radial-gradient(ellipse at 75% 75%,#49141d 0%,transparent 50%),#05090c}
+.choose-action.orange{background:#e6384c;color:white}
+.chooser-intro{max-width:940px}.chooser-intro h1{max-width:880px}
+.choose-description{min-height:225px}
+.mitech-brand .mitech-name{font-size:clamp(20px,2vw,26px)}
+.mitech-brand .mitech-name small{font-size:8px;letter-spacing:1.5px}
+.light-services-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.embedded-demo{height:calc(100dvh - 51px);min-height:460px;background:#111;overflow:hidden}
+.embedded-demo iframe{display:block;width:100%;height:100%;border:0;background:transparent}
+@media(max-width:980px){.light-services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){
+  .toolbar-tab .tab-label{display:none}
+  .toolbar-tab{padding:8px 10px!important;min-width:33px}
+  .toolbar-actions{gap:3px}
+  .toolbar-share{min-width:32px;padding:8px!important}
+  .toolbar-home{font-size:13px}
+  .embedded-demo{height:calc(100dvh - 48px)}
+  .choose-description{min-height:auto}
+  .tech-preview-blob{right:60px;width:97px;height:163px}
+  .tech-preview-head{font-size:27px}
+  .light-services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mitech-brand .mitech-name{font-size:20px}
+}
+@media(max-width:390px){.toolbar-tab{padding:7px 8px!important;min-width:29px}}
